@@ -7,12 +7,168 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fimpid</title>
-  <link href="styles.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      opacity: 0; /* Initially hide the content */
+      animation: fadeIn 1s ease-in-out forwards; /* Apply fade-in animation */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    #navbar-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    #navbar {
+      width: calc(100% - 60px);
+      padding: 20px 20px;
+      background-color: #1f1f1f;
+      border-radius: 30px;
+      text-align: center;
+      position: fixed;
+      top: 20px;
+      left: 10px;
+      z-index: 999;
+      box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    #navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block; 
+    }
+
+    #navbar ul li {
+      display: inline-block; 
+      margin: 0 10px;
+      transition: transform 0.3s ease;
+    }
+
+    #navbar img {
+      height: 40px;
+      margin-right: 10px;
+      display: inline-block; 
+      vertical-align: middle;
+    }
+
+    #navbar ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 18px;
+    }
+
+    #navbar ul li:hover {
+      transform: translateY(-3px);
+    }
+
+    #bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: #0D0D0D;
+    }
+
+    .content {
+      padding-top: 120px;
+      text-align: center;
+    }
+
+    .feature-box {
+        background-color: #111;
+        padding: 20px 30px;
+        margin: 20px 0;
+        width: calc(100% - 60px);
+        position: fixed;
+        top: 100%; /* Adjust as needed */
+    }
+
+    .feature-box h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .feature-box p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .feature-box a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .animated-text-home {
+      background: linear-gradient(45deg, #ffffff, #bbbbbb, #a3a3a3);
+      background-size: 400% 400%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      animation: gradientAnimation 15s ease infinite;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    h1, h3 {
+      margin: 5px 0;
+    }
+
+    .button-container {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .scroll-down-button {
+      background-color: #1f1f1f;
+      color: #ffffff;
+      padding: 15px 15px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    .devices-image-home {
+        height: 600px;
+    }
+  </style>
 </head>
 <body>
   <div id="navbar-container">
     <div id="navbar">
-      <img src="logo.png" alt="Fimpid logo">
+      <img src="Assets/logo.png" alt="Fimpid logo">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Features</a></li>
@@ -22,10 +178,20 @@
       </ul>
     </div>
   </div>
-  <div id="animated-bg"></div>
+  <div id="bg"></div>
   <div class="content">
     <h1 class="animated-text-home">Introducing, fimpidOS.</h1>
     <h3>The best OS for your Android devices. Coming soon.</h3>
+    <br>
+    <img class="devices-image-home" src="Assets/devices.png" alt="Fimpid Devices">
+  </div>
+  <div class="button-container">
+    <button class="scroll-down-button"><img class="scroll-down-img" src="Assets/arrow-down.png"></button>
+  </div>
+  <div class="feature-box">
+    <h2>Features</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam magna a tincidunt facilisis. Nulla ut lacinia eros, eget feugiat nisl. Suspendisse potenti.</p>
+    <p>Phasellus vehicula eros ac quam suscipit ultrices. Integer quis urna eget elit dictum dictum ut ut est. Nam sollicitudin velit et congue tincidunt.</p>
   </div>
 </body>
 </html>

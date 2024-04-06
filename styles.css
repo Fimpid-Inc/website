@@ -1,18 +1,18 @@
-  body {
+body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     background-color: #121212;
     color: #ffffff;
   }
-
+  
   #navbar-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 20px;
   }
-
+  
   #navbar {
     width: calc(100% - 60px);
     padding: 20px 20px;
@@ -25,37 +25,37 @@
     z-index: 999;
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
   }
-
+  
   #navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: inline-block; 
   }
-
+  
   #navbar ul li {
     display: inline-block; 
     margin: 0 10px;
     transition: transform 0.3s ease;
   }
-
+  
   #navbar img {
     height: 40px;
     margin-right: 10px;
     display: inline-block; 
     vertical-align: middle;
   }
-
+  
   #navbar ul li a {
     text-decoration: none;
     color: #ffffff;
     font-size: 18px;
   }
-
+  
   #navbar ul li:hover {
-    transform: translateY(-3spx);
+    transform: translateY(-3px);
   }
-
+  
   #animated-bg {
     position: absolute;
     top: 0;
@@ -67,7 +67,7 @@
     background-image: repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02) 5px, transparent 5px, transparent 10px);
     animation: animateStripes 5s linear infinite;
   }
-
+  
   @keyframes animateStripes {
     0% {
       background-position: 0 0;
@@ -76,12 +76,36 @@
       background-position: 0 -50px;
     }
   }
-
+  
   .content {
     padding-top: 120px;
     text-align: center;
   }
-
+  
+  .feature-box {
+    background-color: #000;
+    padding: 20px 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+  
+  .feature-box h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .feature-box p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .feature-box a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
   .animated-text-home {
     background: linear-gradient(45deg, #ffffff, #bbbbbb, #a3a3a3);
     background-size: 400% 400%;
@@ -91,7 +115,7 @@
     display: inline-block;
     animation: gradientAnimation 15s ease infinite;
   }
-
+  
   @keyframes gradientAnimation {
     0% {
       background-position: 0% 50%;
@@ -103,7 +127,8 @@
       background-position: 0% 50%;
     }
   }
-
+  
   h1, h3 {
     margin: 5px 0;
   }
+  
